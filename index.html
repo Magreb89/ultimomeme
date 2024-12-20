@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergyMeme</title>
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link to AOS library for animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        header {
+            background-image: url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(18, 18, 18, 0.7);
+        }
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .header-content img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        .header-content h1 {
+            font-size: 36px;
+            color: #76ff03;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .header-content p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .btn {
+            background-color: #76ff03;
+            color: #121212;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background-color: #64dd17;
+            transform: scale(1.1);
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h2 {
+            font-size: 30px;
+            color: #76ff03;
+            margin-bottom: 20px;
+        }
+        .features, .nft-marketplace {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .feature, .nft-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            width: 280px;
+            text-align: center;
+        }
+        .feature img, .nft-item img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .feature h3, .nft-item h3 {
+            font-size: 18px;
+            color: #ffffff;
+        }
+        .content img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+        .content img:hover {
+            transform: scale(1.05);
+        }
+        .content p {
+            font-size: 16px;
+            color: #b0b0b0;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #1e1e1e;
+            color: #9e9e9e;
+            text-align: center;
+            padding: 20px;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .header-content img {
+                width: 150px;
+            }
+            .header-content h1 {
+                font-size: 48px;
+            }
+            .header-content p {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content" data-aos="fade-down">
+            <img src="logo.jpg" alt="EnergyMeme Logo">
+            <h1>EnergyMeme</h1>
+            <p>The Future of Sustainable Meme Coins </p>
+            <p>Join the revolution of sustainable meme coins with EnergyMeme!</p>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" data-aos="fade-up">
+        <h2>About Us</h2>
+        <div class="content">
+            <img src="about-us.jpg
+		" alt="Our project">
+            <p>Our vision combines crypto innovation with renewable energy.</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" data-aos="fade-up">
+        <h2>Why Choose EnergyMeme?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="blockchain-icon.png" alt="Blockchain">
+                <h3>Decentralized</h3>
+                <p>Powered by blockchain technology for transparency and security.</p>
+            </div>
+            <div class="feature">
+                <img src="sustainable-icon.png" alt="Sustainability">
+                <h3>Sustainable</h3>
+                <p>Focus on renewable energy and eco-friendly crypto solutions.</p>
+            </div>
+            <div class="feature">
+                <img src="community-icon.png" alt="Community">
+                <h3>Community Driven</h3>
+                <p>A passionate community working towards a greener future.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" data-aos="fade-up">
+        <h2>Roadmap</h2>
+        <div class="content">
+            <img src="roadmap-visual.jpg" alt="Roadmap">
+            <p>Step-by-step milestones toward a greener future.</p>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section id="tokenomics" data-aos="fade-up">
+        <h2>Tokenomics</h2>
+        <div class="content">
+            <img src="tokenomics-chart.jpg" alt="Tokenomics">
+            <p>Transparent token distribution for growth and sustainability.</p>
+        </div>
+    </section>
+
+    <!-- NFT Marketplace Section -->
+    <section id="nft-marketplace" data-aos="fade-up">
+        <h2>EnergyMeme NFT Marketplace</h2>
+        <div class="nft-marketplace">
+            <div class="nft-item">
+                <img src="nft-icon2.png" alt="NFT 1">
+                <h3>Eco-Friendly NFTs</h3>
+                <p>Mint and trade NFTs with a focus on sustainability.</p>
+            </div>
+            <div class="nft-item">
+                <img src="nft-icon.png" alt="NFT 2">
+                <h3>Exclusive Drops</h3>
+                <p>Access limited-edition NFTs supporting renewable projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <div class="content">
+            <p>Connect with us and be part of the EnergyMeme community!</p>
+        </div>
+        <div class="social-buttons">
+            <a href="https://x.com" class="btn">Twitter/X</a>
+            <a href="https://t.me/+lW6iKHNms2MwOTJk" class="btn">Telegram</a>
+            <a href="mailto:info@energymeme.com" class="btn">DexScreen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 EnergyMeme. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS Library Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
